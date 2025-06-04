@@ -28,7 +28,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      VITE_API_URL: http://truth-machine-backend:3030
+      VITE_API_URL: http://audit-system.universalplastic.io:3030
 
   truth-machine-backend:
     build:
@@ -42,7 +42,7 @@ services:
       NETWORK: "test"
       DB_NAME: "truth-machine"
       FUNDING_WIF: "KxeL17X2WiSLVtFrVe8ZSbcNsC487k47c4RtAvR98S4QLWGr9dda"
-      DOMAIN: "https://ce89-90-168-113-163.ngrok-free.app"
+      DOMAIN: "http://audit-system.universalplastic.io:3030"
       CALLBACK_TOKEN: "bb41f4e2424fed13d04b5a85ef7929dd0e9674a5e39f0a266802ec90acfd13f5"
       MONGO_URI: "mongodb://mongo:27017"
       PORT: 3030
