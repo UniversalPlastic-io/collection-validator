@@ -1,21 +1,22 @@
 services:
-  truth-machine:
-    image: bsvb/truth-machine:latest
-    build:
-      context: back
-      dockerfile: Dockerfile
-    container_name: truth-machine-backend
-    restart: always
-    ports:
-      - "3030:3030"
-    environment:
-      NETWORK: "test"
-      DB_NAME: "truth-machine"
-      FUNDING_WIF: "KwEnbvYVJZrpf1HTLEb3jo9Wz19r2uzPQ2waPTPX56vfij8nd7vH"
-      DOMAIN: "your-domain.com"
-      CALLBACK_TOKEN: "tvhbeVfbF3nUrZTmU" # replace with your own random string
-      MONGO_URI: "mongodb://mongo:27017"
-      PORT: 3030
+
+  # truth-machine:  # Idk why originally the backend container was duplicated
+  #   image: bsvb/truth-machine:latest
+  #   build:
+  #     context: back
+  #     dockerfile: Dockerfile
+  #   container_name: truth-machine-backend
+  #   restart: always
+  #   ports:
+  #     - "3030:3030"
+  #   environment:
+  #     NETWORK: "test"
+  #     DB_NAME: "truth-machine"
+  #     FUNDING_WIF: "KwEnbvYVJZrpf1HTLEb3jo9Wz19r2uzPQ2waPTPX56vfij8nd7vH"
+  #     DOMAIN: "your-domain.com"
+  #     CALLBACK_TOKEN: "tvhbeVfbF3nUrZTmU" # replace with your own random string
+  #     MONGO_URI: "mongodb://mongo:27017"
+  #     PORT: 3030
 
   truth-machine-demo:
     image: bsvb/truth-machine-demo:latest
@@ -40,13 +41,14 @@ services:
     environment:
       NETWORK: "test"
       DB_NAME: "truth-machine"
-      FUNDING_WIF: "LzKDHiboYPoBcKK4T5mfC9eyrGQDy2RasnDwjw7KMC4cjyLGN3oP" # This is a throwaway test key
-      DOMAIN: "your-domain.com"
-      CALLBACK_TOKEN: "tvhbeVfbF3nUrZTmU"
+      FUNDING_WIF: "KxeL17X2WiSLVtFrVe8ZSbcNsC487k47c4RtAvR98S4QLWGr9dda"
+      DOMAIN: "https://ce89-90-168-113-163.ngrok-free.app"
+      CALLBACK_TOKEN: "bb41f4e2424fed13d04b5a85ef7929dd0e9674a5e39f0a266802ec90acfd13f5"
       MONGO_URI: "mongodb://mongo:27017"
       PORT: 3030
 
   mongo:
+    container_name: mongo
     image: mongo:6-jammy
     ports:
       - '28017:27017'
