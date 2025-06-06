@@ -25,6 +25,7 @@ const key = PrivateKey.fromWif(FUNDING_WIF)
  * Bitcoin address derived from the private key
  * Uses different version byte (0x6f) for testnet addresses
  */
-const address = NETWORK === 'test' ? key.toAddress([0x6f]) : key.toAddress()
+//const address = NETWORK === 'test' ? key.toAddress([0x6f]) : key.toAddress()
+const address = '18KiFFTSSoBqcBP93Dx1tDBDjbuWoJzdVM'
 
 export { key, address }
