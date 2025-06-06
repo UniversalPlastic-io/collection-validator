@@ -36,8 +36,8 @@ function App() {
      */
     return (
         <div style={{ margin: '2rem', fontFamily: 'Helvetica, sans-serif' }}>
-            <h1>Truth Machine</h1>
-            <h2>Data Integrity & Timestamping Demo</h2>
+            <h1>Audit System</h1>
+            <h2>Data Integrity & Timestamping</h2>
             <FundingProvider>
                 <main>
                     {/* Treasury Management Section */}
