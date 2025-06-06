@@ -18,7 +18,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.1",
-    "mongodb": "^6.13.0"
+    "mongodb": "^6.13.0",
+    "@handcash/handcash-connect": "^0.8.11"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
