@@ -26,7 +26,7 @@ services:
     container_name: truth-machine-frontend
     restart: always
     ports:
-      - "3000"
+      - "3000:3000"
     environment:
       VITE_API_URL: http://audit-system.universalplastic.io:3030
 
@@ -37,7 +37,7 @@ services:
     container_name: truth-machine-backend
     restart: always
     ports:
-      - "3030"
+      - "3030:3030"
     environment:
       NETWORK: "test"
       DB_NAME: "truth-machine"
