@@ -39,7 +39,7 @@ services:
     ports:
       - "3030:3030"
     environment:
-      NETWORK: "main"
+      NETWORK: "test"
       DB_NAME: "truth-machine"
       FUNDING_WIF: "KxeL17X2WiSLVtFrVe8ZSbcNsC487k47c4RtAvR98S4QLWGr9dda"
       DOMAIN: "http://audit-system.universalplastic.io:3030"
